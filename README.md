@@ -8,26 +8,29 @@
 
 1. Configurar string de conexão em appsettings.json
 2. Criar banco no PostgreSQL
-3. Rodar:
+3. Na pasta backend/TodoApp.Api:
 
 ```bash
 dotnet restore
 dotnet run
 ```
+
+Para testes com xUnit, na pasta backend/TodoApp.Tests:
+
+```bash
+dotnet restore
+dotnet test
+```
+
 ---
 
 ## 📌 Frontend
-
-```markdown
-## Frontend - SAPUI5
 
 ### Requisitos
 - Node.js
 - UI5 CLI
 
 ### Instalar UI5 CLI
-
-```
 
 ```bash
 npm install --global @ui5/cli
