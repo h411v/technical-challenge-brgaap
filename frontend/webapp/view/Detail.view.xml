@@ -1,0 +1,18 @@
+<mvc:View
+  controllerName="ui5.app.controller.Detail"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+
+<Page title="Task Detail"
+  showNavButton="true"
+  navButtonPress="onBack">
+
+<VBox class="sapUiMediumMargin">
+  <Text text="ID: {/id}" />
+  <Text text="Title: {/title}" />
+  <Text text="User: {/userId}" />
+  <CheckBox selected="{/completed}" text="Completed" select=".onToggleCompleted" />
+</VBox>
+
+</Page>
+</mvc:View>

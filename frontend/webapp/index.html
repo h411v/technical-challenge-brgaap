@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <script
+        id = "sap-ui-bootstrap"
+        src = "resources/sap-ui-core.js"
+        data-sap-ui-theme = "sap_horizon"
+        data-sap-ui-libs = "sap.m"
+        data-sap-ui-compat-version = "edge"
+        data-sap-ui-async = "true"
+        data-sap-ui-on-init = "module:sap/ui/core/ComponentSupport"
+        data-sap-ui-resource-roots = '{
+          "ui5.app": "./"
+        }'>
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="sapUiBody">
+    <div
+        data-sap-ui-component
+        data-name="ui5.app"
+        data-id="container"
+        data-settings='{"id":"ui5app"}'>
+    </div>
+  </body>
+</html>

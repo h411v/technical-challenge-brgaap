@@ -1,0 +1,34 @@
+node_modules
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider / VSCode
+.idea/
+.vscode/
+
+# Test results
+TestResults/
+
+# Logs
+*.log
+
+# SQLite
+*.db
+*.sqlite
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dotnet
+*.deps.json
+*.runtimeconfig.json
+
+# Environment
+.env

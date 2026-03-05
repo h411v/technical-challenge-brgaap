@@ -1,0 +1,81 @@
+<mvc:View
+  controllerName="ui5.app.controller.List"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core">
+
+<Page title="Tasks">
+
+  <content>
+    <VBox class="sapUiSmallMargin">
+      <Toolbar>
+        <Button
+          text="Synchronize"
+          icon="sap-icon://synchronize"
+          type="Emphasized"
+          press=".onSync"/>
+      </Toolbar>
+
+      <SearchField
+        width="100%"
+        liveChange="onSearch"
+        placeholder="Search for title..." />
+
+      <List
+        id="todoList"
+        items="{/data}"
+        busy="{/busy}"
+        growing="true"
+        growingThreshold="10">
+
+      <items>
+        <CustomListItem>
+          <HBox
+            justifyContent="SpaceBetween"
+            alignItems="Center"
+            width="100%">
+
+          <VBox>
+            <Text
+              text="{title}"
+              class="{= ${completed} ? 'doneTask' : '' }" />
+            <Text text="User: {userId}" />
+          </VBox>
+
+          <HBox alignItems="Center" gap="0.5rem">
+            <CheckBox selected="{completed}" select="onToggleCompleted" />
+            <Button
+              text="Details"
+              type="Emphasized"
+              press="onDetail" />
+          </HBox>
+
+        </HBox>
+      </CustomListItem>
+    </items>
+
+  </List>
+
+  <HBox
+    justifyContent="Center"
+    class="sapUiSmallMarginTop"
+    gap="1rem">
+
+  <Button
+    text="Previous"
+    press="onPrevious"
+    enabled="{= ${/page} > 1 }" />
+
+  <Text text="Page {/page}" />
+
+  <Button
+    text="Next"
+    press="onNext" />
+
+</HBox>
+
+    </VBox>
+  </content>
+
+</Page>
+</mvc:View>
